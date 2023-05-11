@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
     <link rel="stylesheet" href="source/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -17,42 +19,42 @@
         <option value="tokyo">Tokyo</option>
         <option value="paris">Paris</option>
       </select>
-      <div class="city">
+      <div class="city" id="nigeria">
         <div>
           <h2>Nigeria 🇳🇬</h2>
-          <div class="date">August 15th 2022</div>
+          <div class="date"></div>
         </div>
-        <div class="time">1:48:15 <small>PM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="city">
+      <div class="city" id="chicago">
         <div>
-          <h2>Morocco 🇲🇦</h2>
-          <div class="date">August 15th 2022</div>
+          <h2>Chicago 🇺🇸</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">1:48:15 <small>PM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="city">
+      <div class="city" id="tokyo">
+        <div>
+          <h2>Tokyo 🇯🇵</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
+      </div>
+      <div class="city" id="jamaica">
         <div>
           <h2>Jamaica 🇯🇲</h2>
-          <div class="date">August 15th 2022</div>
+          <div class="date"></div>
         </div>
-        <div class="time">1:48:15 <small>PM</small></div>
-      </div>
-      <div class="city">
-        <div>
-          <h2>Dubai 🇦🇪</h2>
-          <div class="date">August 15th 2022</div>
-        </div>
-        <div class="time">1:48:15 <small>PM</small></div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
       <a href="https://github.com/maryam-sulayman/world-clock" class="link">
-        Open-sourced code
+        Open-source code
       </a>
       by Maryam Sulayman, Hosted on
       <a href="https://world-clock-final-project.netlify.app/" class="link"
-        >Netlify</a
+        >Netlify.</a
       >
     </footer>
     <script src="source/script.js"></script>

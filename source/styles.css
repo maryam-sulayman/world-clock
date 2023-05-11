@@ -22,7 +22,7 @@ select {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 500px;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   padding: 30px;
   display: block;
