@@ -1,12 +1,11 @@
 function displayTime() {
-  let nigeriaElement = document.querySelector("#nigeria");
-  let nigeriaDate = nigeriaElement.querySelector(".date");
-  let nigeriaTime = nigeriaElement.querySelector(".time");
-  let nigeriaDetail = moment().tz("Africa/Lagos");
-  nigeriaDate.innerHTML = nigeriaDetail.format("MMMM Do YYYY");
-  nigeriaTime.innerHTML = nigeriaDetail.format(
-    "h:mm:ss [<small>] A [</small>]"
-  );
+  let londonElement = document.querySelector("#london");
+  let londonDate = londonElement.querySelector(".date");
+  let londonTime = londonElement.querySelector(".time");
+  let londonDetail = moment().tz("Europe/London");
+  londonDate.innerHTML = londonDetail.format("MMMM Do YYYY");
+  londonTime.innerHTML = londonDetail.format("h:mm:ss [<small>] A [</small>]");
+
   let chicagoElement = document.querySelector("#chicago");
   let chicagoDate = chicagoElement.querySelector(".date");
   let chicagoTime = chicagoElement.querySelector(".time");
@@ -15,6 +14,12 @@ function displayTime() {
   chicagoTime.innerHTML = chicagoDetail.format(
     "h:mm:ss [<small>] A [</small>]"
   );
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDate = tokyoElement.querySelector(".date");
+  let tokyoTime = tokyoElement.querySelector(".time");
+  let tokyoDetail = moment().tz("Asia/tokyo");
+  tokyoDate.innerHTML = tokyoDetail.format("MMMM Do YYYY");
+  tokyoTime.innerHTML = tokyoDetail.format("h:mm:ss [<small>] A [</small>]");
 
   let jamaicaElement = document.querySelector("#jamaica");
   let jamaicaDate = jamaicaElement.querySelector(".date");
@@ -24,13 +29,35 @@ function displayTime() {
   jamaicaTime.innerHTML = jamaicaDetail.format(
     "h:mm:ss [<small>] A [</small>]"
   );
-
-  let tokyoElement = document.querySelector("#tokyo");
-  let tokyoDate = tokyoElement.querySelector(".date");
-  let tokyoTime = tokyoElement.querySelector(".time");
-  let tokyoDetail = moment().tz("Asia/tokyo");
-  tokyoDate.innerHTML = tokyoDetail.format("MMMM Do YYYY");
-  tokyoTime.innerHTML = tokyoDetail.format("h:mm:ss [<small>] A [</small>]");
 }
 displayTime();
 setInterval(displayTime, 1000);
+
+function cityDetail(event) {
+  let cityName = event.target.value;
+  let cityNameFormatted = cityName.replace("_", " ").split("/")[1];
+  let cityDate = moment().tz(cityName).format("MMMM Do YYYY");
+  let cityTime = moment().tz(cityName).format("h:mm:ss [<small>]A[</small>]");
+  let replaceCity = document.querySelector("#cities");
+  replaceCity.innerHTML = `<div class="city">
+          <div>
+            <h2> ${cityNameFormatted}</h2>
+            <div class="date">${cityDate}</div>
+          </div>
+          <div class="time">${cityTime}</div>
+          </div> 
+          <div class ="closing-link">
+          <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">  All cities </a></div>`;
+  setInterval(() => {
+    cityDetail(event);
+  }, 1000);
+}
+function showCurrentLocation(event) {
+  let currentElement = moment().tz(event.target.value).guess();
+}
+
+let selectedCity = document.querySelector("#city");
+selectedCity.addEventListener("change", cityDetail);
+
+let currentLocation = document.querySelector("#icon");
+currentLocation.addEventListener("click", showCurrentLocation);

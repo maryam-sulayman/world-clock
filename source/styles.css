@@ -15,7 +15,7 @@ h2 {
   font-size: 25px;
 }
 select {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border-radius: 8px;
   font-size: 18px;
@@ -26,13 +26,19 @@ select {
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   padding: 30px;
   display: block;
-  margin: 40px auto;
+  margin: 30px auto;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.icon {
+  font-size: 40px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
 .city {
   display: flex;
   justify-content: space-between;
@@ -57,6 +63,16 @@ select {
 }
 .link {
   text-decoration: none;
+}
+.closing-link,
+.back-to-homepage {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+.back-to-homepage:hover {
+  color: #38598b;
 }
 footer {
   color: black;
