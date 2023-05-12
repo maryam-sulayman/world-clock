@@ -47,7 +47,7 @@ function cityDetail(event) {
           <div class="time">${cityTime}</div>
           </div> 
           <div class ="closing-link">
-          <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">  All cities </a></div>`;
+          <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">   City List  </a></div>`;
 }
 
 function showCurrentLocation() {
@@ -67,7 +67,7 @@ function showCurrentLocation() {
           <div class="time">${currentTime}</div>
           </div> 
           <div class ="closing-link">
-          <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">  All cities </a></div>`;
+          <a href="https://world-clock-final-project.netlify.app/">  City List  </a></div>`;
 }
 
 let selectedCity = document.querySelector("#city");

@@ -1,10 +1,5 @@
 body {
-  background: linear-gradient(
-    179.1deg,
-    rgb(247, 238, 238) -1.9%,
-    rgb(247, 202, 201) 44.9%,
-    rgb(145, 168, 208) 100.1%
-  );
+  background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
   font-family: sans-serif;
 }
@@ -23,8 +18,12 @@ select {
 }
 
 .container {
-  max-width: 500px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  max-width: 450px;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.3) 0%,
+    rgb(204, 217, 226) 74.6%
+  );
   padding: 30px;
   display: block;
   margin: 30px auto;
@@ -68,7 +67,8 @@ select {
   font-size: 25px;
   vertical-align: middle;
 }
-.link {
+.link,
+.attribute {
   text-decoration: none;
 }
 .closing-link,
@@ -79,7 +79,7 @@ select {
   margin-top: 20px;
 }
 .back-to-homepage:hover {
-  color: #38598b;
+  color: rgb(150, 21, 21);
 }
 footer {
   color: black;
