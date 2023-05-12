@@ -78,6 +78,7 @@ select {
   color: black;
   margin-top: 20px;
 }
+.closing-link:hover,
 .back-to-homepage:hover {
   color: rgb(150, 21, 21);
 }
