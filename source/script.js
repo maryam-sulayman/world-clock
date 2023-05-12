@@ -48,16 +48,30 @@ function cityDetail(event) {
           </div> 
           <div class ="closing-link">
           <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">  All cities </a></div>`;
-  setInterval(() => {
-    cityDetail(event);
-  }, 1000);
 }
-function showCurrentLocation(event) {
-  let currentElement = moment().tz(event.target.value).guess();
+
+function showCurrentLocation() {
+  let currentElement = moment.tz.guess();
+  let currentElementName = currentElement.replace("_", " ").split("/")[1];
+  let currentDate = moment.tz(currentElement).format("MMMM Do YYYY");
+  let currentTime = moment
+    .tz(currentElement)
+    .format("h:mm:ss [<small>]A[</small>]");
+  let replaceCity = document.querySelector("#cities");
+
+  replaceCity.innerHTML = `<div class="city">
+          <div>
+            <h2> ${currentElementName}</h2>
+            <div class="date">${currentDate}</div>
+          </div>
+          <div class="time">${currentTime}</div>
+          </div> 
+          <div class ="closing-link">
+          <a href="file:///Users/maryamsulayman/Desktop/world-clock/index.html" class="back-to-homepage">  All cities </a></div>`;
 }
 
 let selectedCity = document.querySelector("#city");
 selectedCity.addEventListener("change", cityDetail);
 
-let currentLocation = document.querySelector("#icon");
+let currentLocation = document.querySelector("#current");
 currentLocation.addEventListener("click", showCurrentLocation);
